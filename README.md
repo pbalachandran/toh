@@ -2,6 +2,8 @@
 
 Tour of Heroes Angular4 Trail
 
+Please reference this link for the Angular4 TOH: https://v2.angular.io/docs/ts/latest/tutorial/
+
 ## Development server
 
 Run ng serve to access the server at http://localhost:4200
