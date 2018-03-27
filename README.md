@@ -6,7 +6,7 @@ Tour of Heroes Angular4 Trail
 
 Run ng serve to access the server at http://localhost:4200
 
-## Unit Tests & running them
+## Unit Tests and running them
 
 Each component and service have accompanying unit tests
 
