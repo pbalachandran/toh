@@ -1,0 +1,14 @@
+<div class="hero-detail" *ngIf="hero">
+  <div class="hero-detail__title">{{hero.name}} details!</div>
+  <div class="hero-detail__id">
+    <label class="hero-detail__label">id: </label>
+    <span class="hero-detail__id-value"> {{hero.id}}</span>
+  </div>
+  <div class="hero-detail__name">
+    <label class="hero-detail__label">name: </label>
+    <input class="hero-detail__name-value" [(ngModel)]="hero.name" placeholder="name"/>
+  </div>
+  <div class="hero-detail__nav">
+    <button class="hero-detail__nav-button" (click)="navigateToDashboard()">Back</button>
+  </div>
+</div>

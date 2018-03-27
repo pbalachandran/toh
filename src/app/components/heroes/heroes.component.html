@@ -1,0 +1,21 @@
+<div class="heroes">
+  <h2 class="heroes__title">My Heroes</h2>
+  <ul class="heroes__list">
+    <li class="heroes__hero" *ngFor="let hero of heroes"
+        [class.selected]="hero === selectedHero"
+        (click)="onSelect(hero)">
+      <div>
+        <span class="hero__badge">{{hero.id}}</span>
+        <span class="hero__name">{{hero.name}}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="selected-hero" *ngIf="selectedHero">
+    <div class="selected-hero__myHero">
+      {{selectedHero.name | uppercase}} is my hero
+    </div>
+    <div class="selected-hero__details-nav">
+      <button class="selected-hero__view-details" [routerLink]="['/detail', selectedHero.id]">View Details</button>
+    </div>
+  </div>
+</div>
