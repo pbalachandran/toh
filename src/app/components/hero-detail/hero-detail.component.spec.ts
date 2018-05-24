@@ -6,7 +6,6 @@ import {HeroService} from "../../services/hero.service";
 import {createStub} from "../util/create-stub";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs/Observable";
-import {Location} from "@angular/common";
 
 describe('HeroDetailComponent', () => {
   let component: HeroDetailComponent;

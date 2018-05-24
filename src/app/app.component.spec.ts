@@ -1,10 +1,7 @@
-import {async, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {async, TestBed} from '@angular/core/testing';
 import {AppModule} from "./app.module";
 import {AppComponent} from "./app.component";
-import {RouterTestingModule} from "@angular/router/testing";
-import {HeroesComponent} from "./components/heroes/heroes.component";
 import {Router} from "@angular/router";
-import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {createStub} from "./components/util/create-stub";
 
 let mockRouter;
