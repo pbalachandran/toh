@@ -1,5 +1,4 @@
-import {$, $$, browser, by, element, ElementArrayFinder, ElementFinder} from 'protractor';
-import {Promise} from "q";
+import {$, browser, ElementFinder} from 'protractor';
 
 export class AppPage {
   navigateTo() {

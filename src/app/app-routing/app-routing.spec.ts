@@ -4,8 +4,9 @@ import {RouterTestingModule} from "@angular/router/testing";
 import {HeroDetailComponent} from "../components/hero-detail/hero-detail.component";
 import {DashboardComponent} from "../components/dashboard/dashboard.component";
 import {HeroesComponent} from "../components/heroes/heroes.component";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {AppModule} from "../app.module";
+import {Observable} from "rxjs/Observable";
 
 const routes = [
   {
@@ -32,7 +33,9 @@ describe('AppRouting', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [AppRoutingModule, AppModule, RouterTestingModule.withRoutes(routes)],
-      providers: []
+      providers: [
+        {provide: ActivatedRoute, useValue: {params: Observable.of({id: '11'})}},
+      ]
     }).compileComponents();
 
     router = TestBed.get(Router);
@@ -57,5 +60,12 @@ describe('AppRouting', () => {
         expect(router.url).toEqual('/heroes');
       });
     }));
+
+    // fit('navigates to /detail/11', fakeAsync(() => {
+    //   router.navigateByUrl('/detail').then(() => {
+    //     expect(router.url).toEqual('/detail/12');
+    //   });
+    // }));
+
   });
 });

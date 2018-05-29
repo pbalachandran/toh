@@ -4,20 +4,25 @@ import {DashboardComponent} from './dashboard.component';
 import {DashboardModule} from "./dashboard.module";
 import {createStub} from "../util/create-stub";
 import {HeroService} from "../../services/hero.service";
+import {Observable} from "rxjs/Observable";
+import {ActivatedRoute, Router} from "@angular/router";
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
-  let mockHeroService;
+  let mockHeroService, mockRouter;
 
   beforeEach(async(() => {
     mockHeroService = createStub(HeroService);
+    mockRouter = createStub(Router);
 
     TestBed.configureTestingModule({
       imports: [DashboardModule],
       providers: [
-        {provide: HeroService, useValue: mockHeroService}
-        ]
+        {provide: HeroService, useValue: mockHeroService},
+        {provide: ActivatedRoute, useValue: {params: Observable.of({id: '11'})}},
+        {provide: Router, useValue: mockRouter}
+      ]
     }).compileComponents();
   }));
 
@@ -56,7 +61,7 @@ describe('DashboardComponent', () => {
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
 
-    spyOn(mockHeroService, 'getHeroes').and.returnValue(Promise.resolve(heroes));
+    spyOn(mockHeroService, 'getHeroes').and.returnValue(Observable.of(heroes));
     fixture.detectChanges();
   });
 

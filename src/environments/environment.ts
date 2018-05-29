@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  service_url: 'http://localhost:9090'
+  heroservice_url: 'http://localhost:9001'
 };

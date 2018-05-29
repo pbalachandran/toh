@@ -4,6 +4,7 @@ import {HeroesModule} from "./heroes.module";
 import {HeroesComponent} from "./heroes.component";
 import {createStub} from "../util/create-stub";
 import {HeroService} from "../../services/hero.service";
+import {Observable} from "rxjs/Observable";
 
 describe('HeroesComponent', () => {
 
@@ -56,7 +57,7 @@ describe('HeroesComponent', () => {
 
     fixture = TestBed.createComponent(HeroesComponent);
     component = fixture.debugElement.componentInstance;
-    spyOn(mockHeroService, 'getHeroes').and.returnValue(Promise.resolve(heroes));
+    spyOn(mockHeroService, 'getHeroes').and.returnValue(Observable.of(heroes));
     fixture.detectChanges();
   });
 

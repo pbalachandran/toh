@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {DashboardComponent} from "./dashboard.component";
-import {HeroService} from "../../services/hero.service";
 import {RouterModule} from "@angular/router";
 
 @NgModule({
@@ -11,6 +10,5 @@ import {RouterModule} from "@angular/router";
   ],
   declarations: [DashboardComponent],
   exports: [DashboardComponent],
-  providers: [HeroService]
 })
 export class DashboardModule { }
