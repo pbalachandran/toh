@@ -1,8 +1,8 @@
-.toh__nav {
-  max-width: 310px;
+.toh {
+  max-width: 350px;
   min-height: 200px;
   padding-left: 10px;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
 }
 
 .toh__title {
@@ -12,18 +12,18 @@
 
 .toh__dashboard {
   background-color: #EEE;
-  margin: 7px;
+  margin: 2px;
   padding: 5px;
   height: 20px;
   border-radius: 5px;
-  color: lightskyblue;
+  color: blue;
 }
 
 .toh__heroes {
   background-color: #EEE;
-  margin: 1px;
+  margin: 11px;
   padding: 5px;
   height: 20px;
   border-radius: 5px;
-  color: lightskyblue;
+  color: blue;
 }

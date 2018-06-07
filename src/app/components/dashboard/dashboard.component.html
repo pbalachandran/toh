@@ -1,8 +1,10 @@
 <div class="dashboard">
-  <h3 class="dashboard__title">Top Heroes</h3>
-  <div class="grid grid-pad dashboard__heroes">
-  <span class="dashboard__hero" *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]">
-    <div class="dashboard__hero-name">{{hero.name}}</div>
-  </span>
+  <div class="dashboard__layout">
+    <h3 class="dashboard__title">Top Heroes</h3>
+      <div class="grid grid-pad dashboard__heroes">
+        <span class="dashboard__hero" *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]">
+          <div class="dashboard__hero-name">{{hero.name}}</div>
+        </span>
+      </div>
   </div>
 </div>
